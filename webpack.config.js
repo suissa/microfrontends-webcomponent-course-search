@@ -5,15 +5,15 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'course-search.js',
-    library: 'courseSearch',
-    libraryTarget: 'umd',
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
+        use: {
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.css$/,
